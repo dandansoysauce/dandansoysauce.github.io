@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description>A Filipino Geek. Developer</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 31 Jan 2017 04:28:05 +0800</pubDate>
+    <lastBuildDate>Tue, 31 Jan 2017 04:28:05 +0800</lastBuildDate>
+    <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Switched to AMP!</title>
+        <description>&lt;p&gt;Before I switched to AMP - First, I lost my GitHub account because I installed MIUI on my phone and forgot to backup
+my Google Authenticator, for my two-factor auth. Second, as you may have noticed, I also switched to GitLab Pages and to my surprise,
+GitLab has unlimited private repositories for free, and boom, sold. Third, I fixed some stupid yet serious 
+grammatical errors and damn, that was really stupid of me. And lastly, there, I finally switched to &lt;a href=&quot;https://www.ampproject.org/&quot;&gt;AMP&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;AMP or Accelerated Mobile Pages is, as their site says:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;a way to build web pages for static content that render fast.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And it’s superb. Plus your site gets to have a proper seat on Google’s first page, given that you have quite a number of readers.
+Since I only post text, images and mostly basic stuff, my home page loads for about a second and my other pages, a little bit less than that.&lt;/p&gt;
+
+&lt;p&gt;To finish off my AMP switch, I also added an AMP compatible Disqus comments. I had a small wrinkle implementing one: it required
+the universal code to be hosted on a different domain, and I don’t have one! I leech on free stuff.
+Luckily, a guy named &lt;a href=&quot;https://github.com/jamestomasino&quot;&gt;James Tomasino&lt;/a&gt; hosted one and made it publicly available. Seriously, what a guy.
+If you’re like me, then this one’s for you: &lt;a href=&quot;https://labs.tomasino.org/disqus-in-amp/&quot;&gt;Peekaboo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’ll write a How-To on implementing AMP to your Jekyll website. Using, of course, James’ universal code. So tune in.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 30 Jan 2017 16:16:01 +0800</pubDate>
+        <link>http://localhost:4000/misc/2017/01/30/switched-to-amp.html</link>
+        <guid isPermaLink="true">http://localhost:4000/misc/2017/01/30/switched-to-amp.html</guid>
+        
+        <category>update</category>
+        
+        <category>post</category>
+        
+        
+        <category>misc</category>
+        
+      </item>
+    
+      <item>
+        <title>Emgu CV Face Detection App for WPF</title>
+        <description>&lt;p&gt;Lately, I’ve been playing around with Emgu CV’s face detection features and it works really well. As I am fond
+developing apps for the WPF platform, I made one for it too. I’ll try to update this one from time to time,
+but please take note that the purpose of this app is to be a “base” app for your Face Detection needs.&lt;/p&gt;
+
+&lt;p&gt;Right now, the app has few number of features, here they are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clean Material Design UI&lt;/li&gt;
+  &lt;li&gt;SQLite Database&lt;/li&gt;
+  &lt;li&gt;Ability to &lt;strong&gt;Add User&lt;/strong&gt; with Name&lt;/li&gt;
+  &lt;li&gt;Ability to &lt;strong&gt;Take Logs&lt;/strong&gt; with Date and Time&lt;/li&gt;
+  &lt;li&gt;Ability to &lt;strong&gt;Show All Logs&lt;/strong&gt; in a list&lt;/li&gt;
+  &lt;li&gt;Ability to filter all logs&lt;/li&gt;
+  &lt;li&gt;And written in &lt;strong&gt;MVVM Pattern&lt;/strong&gt; for scalability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Just download the source, fire up the solution and you’re good. I’ll be adding the ability to edit users in
+the future and view the user’s face on the Logs Tab. Meanwhile, take a look at the source on &lt;a href=&quot;https://github.com/zxcdani/EmguFaceDetectionWPF&quot;&gt;Github&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 08 Jul 2016 16:16:01 +0800</pubDate>
+        <link>http://localhost:4000/projects/2016/07/08/emgu-face-detection-for-wpf.html</link>
+        <guid isPermaLink="true">http://localhost:4000/projects/2016/07/08/emgu-face-detection-for-wpf.html</guid>
+        
+        <category>wpf</category>
+        
+        <category>emgu</category>
+        
+        <category>c#</category>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+  </channel>
+</rss>

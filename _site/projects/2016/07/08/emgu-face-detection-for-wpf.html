@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+
+<meta charset="utf-8">
+<title>Emgu CV Face Detection App for WPF</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="description" content="A Filipino Geek. Developer">
+<!--<link async href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+<link rel="icon" type="image/png" href="/favicon.png" />
+
+<link rel="canonical" href="http://localhost:4000/projects/2016/07/08/emgu-face-detection-for-wpf.html">
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+
+<script type="application/ld+json">
+    {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": "http://localhost:4000/projects/2016/07/08/emgu-face-detection-for-wpf.html",
+  "headline": "Emgu CV Face Detection App for WPF",
+  "datePublished": "2016-07-08T16:16:01+08:00",
+  "dateModified": "2016-07-08T16:16:01+08:00",
+  "description": "Lately, I’ve been playing around with Emgu CV’s face detection features and it works really well. As I am fonddeveloping apps for the WPF platform, I made on...",
+  "author": {
+    "@type": "Person",
+    "name": "Dani A. Ona"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:4000",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http://localhost:4000",
+    "height": 60,
+    "width": 60
+  }
+}
+</script>
+
+<style amp-custom>
+    
+    .highlight{background:#fff}.highlighter-rouge .highlight{background:#eef}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:teal}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:teal}.highlight .ni{color:purple}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:navy}.highlight .nv{color:teal}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:teal}.highlight .vg{color:teal}.highlight .vi{color:teal}.highlight .il{color:#099}body{font-family:"Helvetica Neue",helvetica,"Open Sans",sans-serif;color:#2c3e50;background-color:#e8e8e8;border-top:solid #d90006;border-width:4px}h1,h2,h3,h4,h5,h6{font-family:"Helvetica Neue",helvetica,"Open Sans",sans-serif;color:#d90006}.icon>svg{display:inline-block;width:16px;height:16px;vertical-align:middle}.icon>svg path{fill:#828282}.username{margin-left:4px;margin-right:18px;margin-bottom:18px}.welcome-greeting{width:100%;padding-top:5px}.welcome-greeting h1{font-weight:900;font-size:4em;line-height:130%}.welcome-greeting p{font-size:2.5em}.body-wrapper{margin-left:270px;transition:all .5s ease 0}.material-icons{font-size:16px;vertical-align:middle}.navigation-bar{display:none;position:absolute;top:0;width:100%}.navbar-container{width:100%;padding:10px 25px}.navbar-container .page-link{display:inline}.navbar-container a{color:#2c3e50;text-decoration:none}.container-blog{padding-left:20px;padding-right:20px;padding-top:30px}.container{width:90%;padding-left:20px;padding-right:20px;padding-top:60px;margin-right:auto;margin-left:auto}.container a{text-decoration:none}.navbar{display:none}.navbar a{text-decoration:none;border-bottom:1px #b1b1b1 solid}.nav-toggle{display:none;color:#d90006;padding-left:10px;padding-top:10px}.brand{font-weight:800;color:black;font-family:"Helvetica Neue",helvetica,"Open Sans",sans-serif;font-size:1.4em;text-shadow:1px 1px #fff}.brand:hover{color:#d90006;-o-transition:.5s;-ms-transition:.5s;-moz-transition:.5s;-webkit-transition:.5s;transition:.5s}.sidebar-wrapper{margin-left:-250px;left:250px;width:250px;background:#f8f8f8;position:fixed;height:100%;overflow-y:auto;z-index:1000;margin-top:-3px;border-top:solid #d90006;transition:all .4s ease 0;border-width:4px;padding-right:10px}.sidebar-wrapper a{color:#435257}.sidebar-wrapper .sidebar-nav{position:absolute;top:0;width:250px;list-style:none;margin:0;padding:30px 0 0}.sidebar-wrapper .sidebar-nav .img-circle{border-radius:50%}.sidebar-wrapper .sidebar-nav li{line-height:33px;text-indent:40px;font-family:"Helvetica Neue",helvetica,"Open Sans",sans-serif;font-weight:200;font-size:1.2em;color:#9c9c9c;text-shadow:1px 1px #fff}.sidebar-wrapper .sidebar-nav li a{color:#435257;display:block;text-decoration:none}.sidebar-wrapper .sidebar-nav li a:hover{color:#2d1e18;background:#fff;text-decoration:none;transition:all 0.2s ease 0}.sidebar-wrapper .sidebar-nav li a:active,.sidebar-wrapper .sidebar-nav li a:focus{text-decoration:none}.sidebar-wrapper .sidebar-nav .sidebar-brand{font-size:1.5em}.sidebar-wrapper .sidebar-nav .sidebar-brand h3{font-size:.7em;font-weight:100;color:#5d5f67}.sidebar-wrapper .sidebar-nav .social-wrapper{color:#5c646f;padding:10px 20px}.sidebar-wrapper .sidebar-nav .social-wrapper li{text-indent:0;word-spacing:10px}.sidebar-wrapper .sidebar-nav .social-wrapper a{font-size:.8em;text-indent:20px}.sidebar-wrapper .sidebar-nav .social-wrapper a:hover{color:#2d1e18;transition:all .3s ease 0}.showcase-wrapper{width:inherit;min-height:200px;box-shadow:inset 0 -10px 5px -2px rgba(119,119,119,0.35);-moz-box-shadow:inset 0 -10px 5px -2px rgba(119,119,119,0.35);-webkit-box-shadow:inset 0 -10px 5px -2px rgba(119,119,119,0.35);border-bottom:solid 1px #fff;background-size:cover;z-index:-4;margin-bottom:30px}.showcase-wrapper .showcase-text{font-size:1em;font-family:"Helvetica Neue",helvetica,"Open Sans",sans-serif;font-weight:bolder;color:#fff;text-align:center;padding-top:70px}.showcase-wrapper .showcase-text a{color:#e8e8e8}.showcase-wrapper .showcase-button{border-radius:.5em;background-color:transparent;border:1px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.8);font-weight:200;font-family:Georgia,Cambria,"Times New Roman",Times,"Lora",serif}.recent-posts{background-color:#fff;color:#4d4d4d;box-shadow:1px 1px 0 1px #e8e8e8;padding:25px;margin-bottom:20px}.recent-posts h1{padding-bottom:10px;font-size:1.6em}.recent-posts .homepage-posts{margin-left:-40px;list-style:none}.recent-posts .homepage-posts time{color:#4d4d4d;font-size:.8em}.card-background{background-color:#f9f9f9;box-shadow:1px 1px 0 1px #e8e8e8;padding:10px 40px}.card-container{padding-top:10px}.about-wrapper{margin-bottom:3%;padding-bottom:3%;font-size:18px}.about-wrapper h1{font-family:"Helvetica Neue",helvetica,"Open Sans",sans-serif;font-weight:bolder;font-size:2.4em;line-height:55px;color:#d90006}.about-wrapper h3,.about-wrapper h4,.about-wrapper h5,.about-wrapper h6{margin-top:5px;margin-bottom:5px}.about-wrapper h4{color:black;font-weight:bold;margin-top:-25px}.about-wrapper h5{font-size:.9em;font-family:"Helvetica Neue",helvetica,"Open Sans",sans-serif;font-weight:500;color:#435257}.about-wrapper h6{color:#2c3e50;font-size:.8em}.about-wrapper b{color:#435257;font-weight:bolder}.about-wrapper .description-wrapper{margin-top:4%}.about-wrapper .description-wrapper .description-info{border-left:2px #428fe0 solid;padding-left:15px;padding-top:5px;padding-bottom:5px}.about-wrapper .description-wrapper .description-info p{font-size:.83em}.about-wrapper .description-wrapper .label{line-height:2.5;padding:5px 7px 3px 7px;background-color:#435257;color:white;border-radius:6%}.blog-roll{margin-bottom:35px;padding-bottom:20px}.blog-roll .read-more{color:black;background-color:#b1b1b1;padding:5px;font-weight:normal}.blog-roll .title{font-size:1.6em;font-weight:700;color:#d90006;padding-top:15px}.blog-roll .meta{text-shadow:1px 1px #fff;color:gray}.blog-roll .body p{font-size:1em}.blog-roll .body h1,.blog-roll .body h2,.blog-roll .body h3{color:#435257}.blog-roll .body h1{color:#2c3e50;font-weight:bolder;font-size:1.2em;line-height:2}.blog-roll .body blockquote{border-left:2px solid #d90006;border-right:2px solid #d90006;margin-left:-40px;margin-right:-40px;padding-left:40px;background:#f3f3f7}.blog-roll .body blockquote p{font-weight:200;font-size:.9em;padding-top:10px;padding-bottom:10px}.blog-post{background-color:#f9f9f9;box-shadow:1px 1px 0 1px #e8e8e8;padding-right:40px;padding-left:40px;margin-bottom:35px;margin-top:20px;padding-bottom:10px}.blog-post .title{font-size:4.6em;font-weight:700;color:#d90006;padding-top:15px;text-align:center}.blog-post .meta{text-shadow:1px 1px #fff;color:gray;text-align:center}.blog-post .body{font-size:1.6em}.blog-post .body h1,.blog-post .body h2,.blog-post .body h3{color:#435257}.blog-post .body h1{color:#2c3e50;font-weight:bolder;font-size:1.4em;line-height:2}.blog-post .body blockquote{border-left:2px solid #d90006;border-right:2px solid #d90006;margin-left:-40px;margin-right:-40px;padding-left:40px;background:#f3f3f7}.blog-post .body blockquote p{font-weight:200;font-size:.9em;padding-top:10px;padding-bottom:10px}.projects-header{background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(../images/project_header.png);background-size:cover;width:100%;height:170px;border-bottom:solid 1px #fff;margin-bottom:30px;color:#fff;position:relative}.projects-header div{margin:0;position:absolute;top:40%;left:50%;transform:translate(-50%, -50%)}.projects-header h1{font-size:3em;font-family:"Helvetica Neue",helvetica,"Open Sans",sans-serif;font-weight:bolder;color:#fff;text-align:center;padding-top:20px}.project-category{background-color:#435257;margin-bottom:-10px;padding:15px;color:ghostwhite}.project-box{background-color:#f9f9f9;padding:10px 40px;margin-bottom:2%}.project-box h3{font-weight:bold;color:#435257}.project-box h6{background-color:#2c3e50;color:white;padding:7px;display:inline;white-space:nowrap}.project-box blockquote{border-left:2px solid #d90006;margin-left:0;padding-left:20px}.project-box button{color:black}.project-box label{font-size:1em}.project-box .label{padding:5px 7px 3px 7px}.interests-header{text-align:center}.interests-header h1{font-size:3.4em;font-weight:bolder;line-height:54px}.interests-header p{font-size:1.2em}.interests-header a{font-size:1.5em}.interests-header a .label{padding:7px 7px 3px 7px}.archive-posts{font-size:1.5em;list-style:none;font-weight:lighter;line-height:30px;margin-left:-40px}@media (max-width: 767px){.body-wrapper{margin-left:0;padding-top:20px}.sidebar-wrapper{display:none}.container{padding-left:10px;padding-right:10px}.blog-post{padding:8px 20px}.sidebar-wrapper{border-top:none;left:0px}.nav-toggle{display:none}.inset{padding:15px}.navbar{display:inherit;background-color:#ededed;margin-top:-20px}}@media screen and (max-width: 766px){.navigation-bar{display:inherit}.navbar-brand{font-weight:bolder}.welcome-greeting h1{font-size:3em}.welcome-greeting p{font-size:1.5em}.projects-header h1{padding-top:0;font-size:1.6em}.projects-header p{text-align:center}.recent-posts h1{font-size:1.5em}.recent-posts .badge{display:none}.recent-posts .homepage-posts a{font-size:.8em}.recent-posts .homepage-posts time{display:none}.about-wrapper h1{font-size:.9em}.about-wrapper h5{font-size:.67em}.about-wrapper h4{margin-top:0}.about-wrapper h6{font-size:.6em}.about-wrapper p{font-size:.8em}.about-wrapper .description-wrapper h4{font-size:.77em}.about-wrapper .description-wrapper .description-info p{font-size:.7em}table tr td:nth-child(2){display:none}.blog-post{margin-bottom:35px;margin-right:0}.blog-post ol,.blog-post ul{margin-left:-20px}.blog-post .title{font-size:2.3em}.blog-post .body{font-size:1.2em;line-height:1.5}.blog-post .body h1{font-size:1.4em;line-height:1}.blog-post .body blockquote{margin-left:-20px;margin-right:-20px}.blog-post .body blockquote p{font-weight:200;font-size:.7em;margin-left:-25px;margin-right:10px;padding-top:10px;padding-bottom:10px}}.badge{display:inline-block;min-width:10px;padding:3px 7px;font-size:12px;font-weight:bold;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:middle;background-color:#777;border-radius:10px}
+
+</style>
+
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+
+  </head>
+  <body>
+    <div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Dani A. Ona </div>
+    <div class="body-wrapper">
+      <div class="navigation-bar">
+  <div class="navbar-container">
+    <a href="/"><p class="navbar-brand">Dani A. Ona</p></a>
+    <a class="page-link" href="/about.html">About</a> •
+    <a class="page-link" href="/blog.html">Blog</a> •
+    <a class="page-link" href="/projects.html">Projects</a> •
+    <a class="page-link" href="/interests.html">Interests</a> •
+    <a class="page-link" href="/list.html">Archive</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <li>
+      <amp-img src="/images/meme.gif" alt="That's supposed to be me"
+        class="img-circle" height="80" width="80"></amp-img>
+    </li>
+    <li class="sidebar-brand">
+      <a href="/">
+        <h1 class="brand">Dani A. Ona</h1>
+      </a>
+      <h3>A Filipino Geek. Developer</h3>
+    </li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/projects.html">Projects</a></li>
+    <li><a href="/list.html">Archive</a></li>
+    <div class="social-wrapper">
+      <li><a href="http://www.twitter.com/dandansoysauce"><span class="icon icon--github"><?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M17.71,9.33C17.64,13.95 14.69,17.11 10.28,17.31C8.46,17.39 7.15,16.81 6,16.08C7.34,16.29 9,15.76 9.9,15C8.58,14.86 7.81,14.19 7.44,13.12C7.82,13.18 8.22,13.16 8.58,13.09C7.39,12.69 6.54,11.95 6.5,10.41C6.83,10.57 7.18,10.71 7.64,10.74C6.75,10.23 6.1,8.38 6.85,7.16C8.17,8.61 9.76,9.79 12.37,9.95C11.71,7.15 15.42,5.63 16.97,7.5C17.63,7.38 18.16,7.14 18.68,6.86C18.47,7.5 18.06,7.97 17.56,8.33C18.1,8.26 18.59,8.13 19,7.92C18.75,8.45 18.19,8.93 17.71,9.33M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" /></svg></span><span class="username">twitter</span></a></li>
+      <li><a href="https://ph.linkedin.com/in/daniona"><span class="icon icon--github"><?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M19,19H16V13.7A1.5,1.5 0 0,0 14.5,12.2A1.5,1.5 0 0,0 13,13.7V19H10V10H13V11.2C13.5,10.36 14.59,9.8 15.5,9.8A3.5,3.5 0 0,1 19,13.3M6.5,8.31C5.5,8.31 4.69,7.5 4.69,6.5A1.81,1.81 0 0,1 6.5,4.69C7.5,4.69 8.31,5.5 8.31,6.5A1.81,1.81 0 0,1 6.5,8.31M8,19H5V10H8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" /></svg></span><span class="username">linkedin</span></a></li>
+      <li><a href="https://gitlab.com/dandansoysauce"><span class="icon icon--github"><?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M2.6,10.59L8.38,4.8L10.07,6.5C9.83,7.35 10.22,8.28 11,8.73V14.27C10.4,14.61 10,15.26 10,16A2,2 0 0,0 12,18A2,2 0 0,0 14,16C14,15.26 13.6,14.61 13,14.27V9.41L15.07,11.5C15,11.65 15,11.82 15,12A2,2 0 0,0 17,14A2,2 0 0,0 19,12A2,2 0 0,0 17,10C16.82,10 16.65,10 16.5,10.07L13.93,7.5C14.19,6.57 13.71,5.55 12.78,5.16C12.35,5 11.9,4.96 11.5,5.07L9.8,3.38L10.59,2.6C11.37,1.81 12.63,1.81 13.41,2.6L21.4,10.59C22.19,11.37 22.19,12.63 21.4,13.41L13.41,21.4C12.63,22.19 11.37,22.19 10.59,21.4L2.6,13.41C1.81,12.63 1.81,11.37 2.6,10.59Z" /></svg></span><span class="username">gitlab</span></a></li>
+    </div>
+  </ul>
+</div>
+
+      <div class="container">
+        <div class="blog-post">
+  <div class="title">Emgu CV Face Detection App for WPF</div>
+  <p class="meta">
+    <small>
+      <span class="icon icon--github"><?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" /></svg></span> 08 Jul 2016
+    </small>
+  </p> <hr/>
+  <div class="body">
+    <p>Lately, I’ve been playing around with Emgu CV’s face detection features and it works really well. As I am fond
+developing apps for the WPF platform, I made one for it too. I’ll try to update this one from time to time,
+but please take note that the purpose of this app is to be a “base” app for your Face Detection needs.</p>
+
+<p>Right now, the app has few number of features, here they are:</p>
+
+<ul>
+  <li>Clean Material Design UI</li>
+  <li>SQLite Database</li>
+  <li>Ability to <strong>Add User</strong> with Name</li>
+  <li>Ability to <strong>Take Logs</strong> with Date and Time</li>
+  <li>Ability to <strong>Show All Logs</strong> in a list</li>
+  <li>Ability to filter all logs</li>
+  <li>And written in <strong>MVVM Pattern</strong> for scalability</li>
+</ul>
+
+<p>Just download the source, fire up the solution and you’re good. I’ll be adding the ability to edit users in
+the future and view the user’s face on the Logs Tab. Meanwhile, take a look at the source on <a href="https://github.com/zxcdani/EmguFaceDetectionWPF">Github</a></p>
+
+  </div>
+</div>
+<div class="container-blog">
+  <ul class="pager">
+
+
+  <li class="next"><a href="/misc/2017/01/30/switched-to-amp.html">Newer &rarr;</a></li>
+
+</ul>
+
+  <amp-iframe
+		height="300"
+		sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+		resizable
+		frameborder="0"
+		src="https://comments.tomasino.org?disqus_title=Emgu+CV+Face+Detection+App+for+WPF&url=http%3A%2F%2Flocalhost%3A4000/%2Fprojects%2F2016%2F07%2F08%2Femgu-face-detection-for-wpf.html&disqus_name=https%3A%2F%2Fapinoygeek.disqus.com%2Fembed.js">
+		<div overflow tabindex="0" role="button" aria-label="Read more">Read more!</div>
+</amp-iframe>
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>

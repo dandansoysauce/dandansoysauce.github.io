@@ -1,0 +1,26 @@
+--- 
+title: A Pinoy Geek's Blog 
+---
+<div class="card-container">
+    {% for post in site.posts limit: 10 %}
+    <div class="blog-roll">
+        <div>       
+            <a href="{{ site.baseurl }}{{ post.url }}">
+                <div class="title">{{ post.title }}</div>
+            </a>
+            <p class="meta">
+                <small>
+                    {% include timer.html %} {{ post.date | date_to_string}}
+                </small>
+            </p>
+            <hr/>
+            <article class="body">
+                {{ post.excerpt }}
+            </article>
+            <a href="{{ site.url }}{{ post.url }}">
+                <button type="button" class="pure-button">Read More</button>
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>

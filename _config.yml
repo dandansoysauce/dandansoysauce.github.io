@@ -1,0 +1,32 @@
+name: Dani A. Ona
+author: Dani Antonio Ona
+baseurl: ""
+url: "https://dandansoysauce.github.io"
+description: A Filipino Geek. Developer
+github: https://github.com/dandansoysauce
+twitter: http://www.twitter.com/dandansoysauce
+facebook: http://www.facebook.com
+linkedin: https://ph.linkedin.com/in/daniona
+email: ona.dani.a@gmail.com
+location: Davao City
+disqus: apinoygeek
+excerpt_separator: <!--more-->
+
+##Make sure to edit the above fields, especially for disqus.
+
+highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+sass:
+    style: :compressed

@@ -1,0 +1,35 @@
+<div class="navigation-bar">
+  <div class="navbar-container">
+    <a href="{{ site.baseurl }}/"><p class="navbar-brand">{{ site.name }}</p></a>
+    <a class="page-link" href="{{ site.baseurl }}/about.html">About</a> •
+    <a class="page-link" href="{{ site.baseurl }}/blog.html">Blog</a> •
+    <a class="page-link" href="{{ site.baseurl }}/projects.html">Projects</a> •
+    <a class="page-link" href="{{ site.baseurl }}/interests.html">Interests</a> •
+    <a class="page-link" href="{{ site.baseurl }}/list.html">Archive</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <li>
+      <amp-img src="{{ site.baseurl }}/images/potato_face.jpg" alt="That's supposed to be me"
+        class="img-circle" height="80" width="80"></amp-img>
+    </li>
+    <li class="sidebar-brand">
+      <a href="{{ site.baseurl }}/">
+        <h1 class="brand">{{ site.name }}</h1>
+      </a>
+      <h3>{{ site.description }}</h3>
+    </li>
+    <li><a href="{{ site.baseurl }}/about.html">About</a></li>
+    <li><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
+    <li><a href="{{ site.baseurl }}/projects.html">Projects</a></li>
+    <li><a href="{{ site.baseurl }}/list.html">Archive</a></li>
+    <div class="social-wrapper">
+      <li>{% include twitter-box.html %}</li>
+      <li>{% include linkedin-box.html %}</li>
+      <li>{% include git.html %}</li>
+    </div>
+  </ul>
+</div>

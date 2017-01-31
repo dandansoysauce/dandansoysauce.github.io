@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="blog-post">
+  <div class="title">{{ page.title }}</div>
+  <p class="meta">
+    <small>
+      {% include timer.html %} {{ page.date | date_to_string}}
+    </small>
+  </p> <hr/>
+  <div class="body">
+    {{ content }}
+  </div>
+</div>
+<div class="container-blog">
+  {% include pager.html %}
+  {% include comment.html %}
+</div>
