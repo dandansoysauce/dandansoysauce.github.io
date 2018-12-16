@@ -24,6 +24,30 @@ h1, h2, h3, h4, h5, h6 {
     color: #d90006
 }
 
+.greeting-menubar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #bbbbbb;
+
+    li {
+        float: left;
+
+        a {
+            display: block;
+            color: #162225;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
 .icon {
 
     > svg {
@@ -112,6 +136,24 @@ a.pure-button-primary,
 a.pure-button-selected {
     background-color: rgb(0, 120, 231);
     color: #fff;
+}
+
+.greeting-link {
+    color: #162225;
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+
+    &:hover {
+        color: #2d1e18;
+        background: #fff;
+        text-decoration: none;
+        transition: all .2s ease 0
+    }
+
+    &:active, &:focus {
+        text-decoration: none;
+    }
 }
 
 .username {
@@ -435,7 +477,8 @@ a.pure-button-selected {
             padding: 5px 7px 3px 7px;
             background-color: #435257;
             color: white;
-            border-radius: 6%;
+            border-radius: 9px;
+            white-space: nowrap;
         }
     }
 }
@@ -593,7 +636,7 @@ a.pure-button-selected {
 
 .project-category {
     background-color: #435257;
-    margin-bottom: -10px;
+    margin-bottom: 0px;
     padding: 15px;
     color: ghostwhite;
 }
