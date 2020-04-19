@@ -1,32 +1,36 @@
-name: Dani A. Ona
-author: Dani Antonio Ona
-baseurl: ""
-url: "https://dandansoysauce.github.io"
-description: A Software Developer.
-github: https://github.com/dandansoysauce
-twitter: http://www.twitter.com/dandansoysauce
-facebook: http://www.facebook.com
-linkedin: https://ph.linkedin.com/in/daniona
-email: o.dani@keemail.me
-location: Davao City, Philippines
-disqus: apinoygeek
-excerpt_separator: <!--more-->
+# site settings
+title: Dani
+subtitle: Software Developer
+email: ona.dani.a@gmail.com
+description: A professional geek. A software developer from the Philippines.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: # the base hostname & protocol for your site
+author: Dani A. Ona
+street_address: Somewhere, here.
+city: Davao City
+state: Davao del Sur
+zip_code: 8000
+country: Philippines
+phone: +63 921 252 8806
 
-##Make sure to edit the above fields, especially for disqus.
+# homepage tiles
+tiles-source: pages # accepts "posts" or "pages"
+tiles-count: 6
 
-highlighter: rouge
+# social settings
+500px_url:
+facebook_url:
+github_url: https://github.com/dandansoysauce
+gitlab_url: 
+googleplus_url: 
+instagram_url: 
+linkedin_url: https://www.linkedin.com/in/daniona/
+pinterest_url:
+slack_url:
+twitter_url: https://twitter.com/dandansoysauce
 
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+# build settings
+markdown: kramdown
 
 sass:
-    style: :compressed
+  style: compressed
