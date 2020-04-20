@@ -45,10 +45,10 @@ nav-menu: true
 		</div>
 	</section>
 	<section>
-		<a href="https://github.com/dandansoysauce/pall" style="width: 350px;" class="image">
-			<img height="400" style="width: 350px;" src="{% link assets/images/pallss.jpg %}" alt="" data-position="top center" />
+		<a href="https://github.com/dandansoysauce/pall" class="image">
+			<img src="{% link assets/images/pallss.jpg %}" alt="" data-position="top center" />
 		</a>
-		<div style="width: 71%;" class="content">
+		<div class="content">
 			<div class="inner">
 				<header class="major">
 					<h3>Pall - Color Picker</h3>
@@ -91,10 +91,10 @@ nav-menu: true
 		</div>
 	</section>
 	<section>
-		<a href="https://github.com/dandansoysauce/simplexkcd" style="width: 350px;" class="image">
-			<img style="width: 350px;" src="{% link assets/images/simplexkcd.webp %}" alt="" data-position="top center" />
+		<a href="https://github.com/dandansoysauce/simplexkcd" class="image">
+			<img src="{% link assets/images/simplexkcd.webp %}" alt="" data-position="top center" />
 		</a>
-		<div style="width: 71%;" class="content">
+		<div  class="content">
 			<div class="inner">
 				<header class="major">
 					<h3>Simple xkcd</h3>
@@ -114,10 +114,10 @@ nav-menu: true
 		</div>
 	</section>
 	<section>
-		<a href="https://github.com/dandansoysauce/caltax-app" style="width: 350px;" class="image">
-			<img style="width: 350px;" src="https://raw.githubusercontent.com/dandansoysauce/caltax-app/master/resources/_20181229_015240.JPG" alt="" data-position="25% 25%" height="100%" />
+		<a href="https://github.com/dandansoysauce/caltax-app" class="image">
+			<img src="https://raw.githubusercontent.com/dandansoysauce/caltax-app/master/resources/_20181229_015240.JPG" alt="" data-position="25% 25%" height="100%" />
 		</a>
-		<div style="width: 71%;" class="content">
+		<div class="content">
 			<div class="inner">
 				<header class="major">
 					<h3>Caltax App</h3>
