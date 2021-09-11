@@ -31,12 +31,24 @@ target="_blank" class="button special">Download CV</a>
 
 <h2>Work Experience</h2>
 
-<h3 style="margin-bottom: 0;">Software Developer</h3>
-<p><b>Vizwoz Software Development Systems, Inc.</b> <br />
-August 2014 - Present
+<h3 style="margin-bottom: 0;">Software Engineer</h3>
+<p><b>Mazira, LLC</b> <br />
+June 2020 - Present
 </p>
 
-<blockquote>I am tasked to develop sophisticated and well-designed software applications using Microsoft Technologies, such as - .NET Framework, C#, Windows Presentation Foundation (WPF), and ASP.NET Core; the System Center Software Manager (SCSM) platform for enterprise-level applications; Visual Studio and Visual Studio Code as our editors, and; Azure DevOps for team collaboration and CI/CD. Additionally, I, together with a team, provide support, fixes and maintenance for existing applications. Moreover, we also develop apps from ground-up: from designing, coding and the usual self-testing. Finally, I continue to update my knowledge by studying state-of-the-art development tools, programming techniques and technologies, together with my fun and way more geeky colleagues.</blockquote>
+<blockquote>Tasked to build simple, yet useful tools for eDiscovery. Writes code in TypeScript and uses the best suited framework for a project. I also maintain 
+existing apps - updating it to the latest standards, redesigning UI and UX while maintaining its overall simplicity.
+</blockquote>
+
+<br />
+
+<h3 style="margin-bottom: 0;">Software Developer</h3>
+<p><b>Vizwoz Software Development Systems, Inc.</b> <br />
+August 2014 - June 2020
+</p>
+
+<blockquote>I am tasked to develop sophisticated and well-designed software applications using Microsoft Technologies, such as - .NET Framework, C#, Windows Presentation Foundation (WPF), and ASP.NET Core; the System Center Software Manager (SCSM) platform for enterprise-level applications; Visual Studio and Visual Studio Code as our editors, and; Azure DevOps for team collaboration and CI/CD. Additionally, I, together with a team, provide support, fixes and maintenance for existing applications. Moreover, we also develop apps from ground-up: from designing, coding and the usual self-testing. Finally, I continue to update my knowledge by studying state-of-the-art development tools, programming techniques and technologies, together with my fun and way more geeky colleagues.
+</blockquote>
 
 <br />
 
