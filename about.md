@@ -33,7 +33,7 @@ target="_blank" class="button special">Download CV</a>
 
 <h3 style="margin-bottom: 0;">Software Engineer</h3>
 <p><b>Mazira, LLC</b> <br />
-June 2020 - Present
+June 2020 - October 2021
 </p>
 
 <blockquote>Tasked to build simple, yet useful tools for eDiscovery. Writes code in TypeScript and uses the best suited framework for a project. I also maintain 
