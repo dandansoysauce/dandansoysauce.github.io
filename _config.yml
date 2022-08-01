@@ -11,7 +11,7 @@ city: Davao City
 state: Davao del Sur
 zip_code: 8000
 country: Philippines
-phone: +63 921 252 8806
+phone:
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
@@ -27,7 +27,7 @@ instagram_url:
 linkedin_url: https://www.linkedin.com/in/daniona/
 pinterest_url:
 slack_url:
-twitter_url: https://twitter.com/dandansoysauce
+twitter_url:
 
 # build settings
 markdown: kramdown
