@@ -24,9 +24,6 @@ experience and I look forward to improving my skillset through either profession
 Scroll down through this page to discover more about my skills, work experience and educational background. If you found
 this page helpful, give me a message or download a copy of my CV. <code>I am open for opportunities.</code></p>
 
-<a href="https://drive.google.com/open?id=1TeUSS_IJo9f_-zNSoCfstka-fK63i8VD"
-target="_blank" class="button special">Download CV</a>
-
 <hr class="major" />
 
 <h2>Work Experience</h2>
